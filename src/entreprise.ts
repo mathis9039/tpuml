@@ -9,6 +9,7 @@ export class Entreprise extends Client{
     fax: string;
     details: Details;
     contact:Contact;
+    
 
     constructor(){
         super();
@@ -20,5 +21,6 @@ export class Entreprise extends Client{
         this.adresse = undefined;
         this.contact= new Contact();
         this.details = new Details();
+        this.droit = undefined;
     }
 }
