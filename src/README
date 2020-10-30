@@ -1,0 +1,33 @@
+phase 1: liste classe
+        public class Client 
+        public class CodeBarre
+        public class Contact
+        public class Details
+        public class Droit 
+        public class Entreprise
+        public class Individu 
+        public class Option 
+        public class Produit
+
+phase 2: liste des énumérations
+        public enum DroitType
+        public enum ClientType
+
+phase 3: interprétation relation
+        Client________1-N_______Droit
+        Client________1-1_______CodeBare
+        Droit_________N-N_______Produit
+        CodeBarre_____1-N_______Option
+        CodeBarre_____1-N_______Produit
+
+        Option_______AGGRÉ______Produit
+
+        Produit______COMPO______Produit
+        Details______COMPO______Individu
+        Details______COMPO______Entreprise
+        Contact______COMPO______Entreprise
+
+        Individu_____HÉRIT______Client
+        Entreprise___HÉRIT______Client
+
+phase 4: implémentation
