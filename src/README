@@ -31,3 +31,5 @@ phase 3: interprétation relation
         Entreprise___HÉRIT______Client
 
 phase 4: implémentation
+Création de produitDroit avec relation de many to many (Produit_____Droit)
+impossibilité d'ajouter la composition de type Produit à l'interieur de la classe Produit (boucle infini)

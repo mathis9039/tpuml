@@ -1,9 +1,13 @@
 import { Client } from "./client";
+import { Details } from "./details";
 
 export class Individu extends Client{
     prenom:string;
     nom: string;
     email: string;
+    details: Details;
+
+
     constructor(){
         super();
         this.id = undefined;
@@ -12,5 +16,6 @@ export class Individu extends Client{
         this.prenom = undefined;
         this.nom = undefined;
         this.email = undefined;
+        this.details = new Details();
     }
 }
