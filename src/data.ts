@@ -76,7 +76,7 @@ function details(){
 
 function contacts(){
     var contacts:Contact = new Contact();
-    contacts.prenom = faker.name.firsName();
+    contacts.prenom = faker.name.firstName();
     contacts.email = faker.internet.email();
     contacts.nom = faker.name.lastName();
     return contacts;
@@ -85,17 +85,21 @@ function contacts(){
 function droitx(){
     var droit:Array<Droit> = new Array;
     var droits:Droit;
-    for (let index = 0; index < 5; index++) {
+    var iteration:number = Math.floor(Math.random() * Math.floor(5)) +1;
+    for (let index = 0; index < iteration; index++) {
         droits = new Droit();
         droits.idDroit = faker.random.number();
         droits.dateFin = faker.date.future();
         droits.dateDebut = faker.date.past();
-        if(index % 3 == 0)
+        if(index % 3 == 0){
             droits.type = DroitType.Droit_01;
-        else if (index %3 == 1)
+        }
+        else if (index %3 == 1){
             droits.type = DroitType.Droit_02;
-        else (index % 3 == 2)
+        }
+        else {
             droits.type = DroitType.Droit_03;
+        }
         droit.push(droits);
     }
     return droit;
